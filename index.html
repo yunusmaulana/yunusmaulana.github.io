@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yunus Maulana - Pengembang Website</title>
+<style>
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1d2b3a;
+  --muted: #5d6b7a;
+  --accent: #1f6f6b;
+  --line: #d5dce3;
+}
+body.gelap {
+  --bg: #111a22;
+  --card: #1a2631;
+  --text: #e8eef3;
+  --muted: #9aabba;
+  --accent: #4fb3ad;
+  --line: #2c3b49;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--card);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 16px;
+}
+nav a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+nav a:hover { color: var(--accent); }
+nav button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+.hero {
+  text-align: center;
+  padding: 40px 0 8px;
+}
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--card);
+  font-size: 2.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+h1 { margin: 0 0 4px; color: var(--accent); }
+.hero p { margin: 0; color: var(--muted); }
+section {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  scroll-margin-top: 70px;
+}
+h2 { margin-top: 0; font-size: 1.2rem; color: var(--accent); }
+h3 { margin: 0 0 4px; font-size: 1rem; }
+.tag {
+  display: inline-block;
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin: 0 6px 8px 0;
+}
+.proyek {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+.proyek p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.tombol {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--card);
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px 8px 0;
+}
+.tombol:hover { opacity: 0.85; }
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 24px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="#tentang">Tentang</a>
+    <a href="#skill">Skill</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+  <button onclick="ubahTema()">Mode gelap</button>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="avatar">YM</div>
+    <h1>Yunus Maulana</h1>
+    <p>Web Developer Pemula</p>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya Yunus Maulana, bekerja di bidang keamanan informasi (IT Security) dengan fokus memantau status dukungan perangkat lunak agar tetap mutakhir dan aman. Saat ini saya sedang mendalami pengembangan website dan membangun portofolio dari dasar. Saya terbuka untuk membuatkan website sederhana bagi usaha kecil yang membutuhkan kehadiran online.</p>
+  </section>
+
+  <section id="skill">
+    <h2>Sedang Saya Pelajari</h2>
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Keamanan Informasi</span>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek</h2>
+    <div class="proyek">
+      <h3>Website Profil Diri</h3>
+      <p>Halaman yang sedang Anda lihat. Dibuat dengan HTML, CSS, dan sedikit JavaScript.</p>
+    </div>
+    <div class="proyek">
+      <h3>Catatan Penjualan</h3>
+      <p>Aplikasi pencatat penjualan dagangan dengan login, ringkasan omzet, dan grafik. Segera tayang.</p>
+    </div>
+    <div class="proyek">
+      <h3>Landing Page Usaha Kecil</h3>
+      <p>Halaman promosi untuk warung atau toko. Sedang dikerjakan.</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <a class="tombol" href="mailto:yunusmaulana1903@gmail.com">Kirim Email</a>
+    <a class="tombol" href="https://wa.me/6281234567890">WhatsApp</a>
+  </section>
+
+  <footer>&copy; 2026 Yunus Maulana</footer>
+</main>
+
+<script>
+function ubahTema() {
+  document.body.classList.toggle("gelap");
+}
+</script>
+</body>
+</html>
